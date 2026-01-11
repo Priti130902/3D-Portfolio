@@ -27,9 +27,15 @@ import {
   Mail,
 } from "lucide-react";
 import Image from "next/image";
+interface ToolCardProps {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}
+
 
 /* ---------- TOOL CARD ---------- */
-const ToolCard = ({ icon, title, desc }) => (
+const ToolCard: React.FC<ToolCardProps> = ({ icon, title, desc }) => (
   <motion.div
     whileHover={{ y: -10, scale: 1.02 }}
     className="p-8 bg-white rounded-[40px] shadow-[15px_15px_30px_#d1d9e6] border border-white"
@@ -41,6 +47,8 @@ const ToolCard = ({ icon, title, desc }) => (
     </p>
   </motion.div>
 );
+
+
 
 export default function PritiUltimatePortfolio() {
   return (
